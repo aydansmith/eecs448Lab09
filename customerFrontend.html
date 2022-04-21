@@ -1,0 +1,32 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <link href="style2.css" rel="stylesheet" type="text/css"/>
+        <center>
+        <div>
+            <script type="text/javascript" src="formChecker.js"></script>
+            <center><form onSubmit="return(canSubmit())" action="customerBackend.php" method="post">
+                Username:<br><input type="text" name="username" id="username"><br>
+                Password:<br><input type="password" name="password" id="password"><br><br>
+                Chiefs Hats Quantity ($10 each):<br><input type="text" name="chiefs" id="one"><br>
+                Royals Hats Quantity ($15 each):<br><input type="text" name="royals" id="two"><br>
+                Jayhawk Hats Quantity ($20 each):<br><input type="text" name="jayhawks" id="three"><br><br>
+                What shipping option would you like?:<br>
+                <label>
+                    <input type="radio" name="shipping" value="7 day">Free 7 day
+                </label><br>
+                <label>
+                    <input type="radio" name="shipping" value="Over Night">$50.00 over night
+                </label><br>
+                <label>
+                    <input type="radio" name="shipping" value="3 Day">$5.00 three day
+                </label><br><br>
+                <input type="reset">
+                <input type="submit">
+            </form>
+            </center>
+        </div>
+        </center>
+    </body>
+</html>

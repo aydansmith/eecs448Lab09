@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html>
+<body>
+    <div>
+    <p id="paragraph" class="test">This is a paragraph that has dummy text. You will be able to use the text fields below to change features about this paragraph. The colors are in RGB form. The minimum is 0 and the max is 255.</p>
+    </div>
+    <h1>Border:</h1>
+    <label for="red">Red (0-255):</label>
+    <input type="text" id="red" name="red">
+    <label for="green">Green (0-255):</label>
+    <input type="text" id="green" name="green">
+    <label for="blue">Blue (0-255):</label>
+    <input type="text" id="blue" name="blue">
+    <label for="width">Width (in pixels):</label>
+    <input type="text" id="width" name="width">
+    <h1>Background Color:</h1>
+    <label for="red2">Red (0-255):</label>
+    <input type="text" id="red2" name="red2">
+    <label for="green2">Green (0-255):</label>
+    <input type="text" id="green2" name="green2">
+    <label for="blue2">Blue (0-255):</label>
+    <input type="text" id="blue2" name="blue2"><br><br>
+    <button id="SubmitButton", onclick="onClick()">Submit</button>
+    <script>
+        function onClick(){
+            var red2 = document.getElementById("red2").value;
+            var green2 = document.getElementById("green2").value;
+            var blue2 = document.getElementById("blue2").value;
+            document.getElementById("paragraph").style.backgroundColor = "rgb("+red2+","+green2+","+blue2+")";
+            var red1 = document.getElementById("red").value;
+            var green1 = document.getElementById("green").value;
+            var blue1 = document.getElementById("blue").value;
+            var width1 = document.getElementById("width").value;
+            console.log(red1, green1, blue1, width1);
+            document.getElementById("paragraph").style.borderColor = "rgb("+red1+","+green1+","+blue1+")";
+            document.getElementById("paragraph").style.borderWidth = width1 + "px";
+
+        }
+    </script>
+    <style>
+        p{
+            border-style: solid;
+            width: 400px;
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html>
+<body>
+    <!--Learned about input forms from https://www.w3schools.com/tags/att_input_type_password.asp-->
+    <img src="images/img1.jpeg" id="pic" width="400" height="400">
+    <p></p>
+    <button id="previous", onclick="onPrevious()">previous</button>
+    <button id="next", onclick="onNext()">next</button>
+    <script type="text/javascript">
+        function onNext(){
+            var array = ["https://people.eecs.ku.edu/~a354s553/images/img1.jpeg","https://people.eecs.ku.edu/~a354s553/images/img2.jpeg","https://people.eecs.ku.edu/~a354s553/images/img3.jpeg","https://people.eecs.ku.edu/~a354s553/images/img4.jpeg", "https://people.eecs.ku.edu/~a354s553/images/img5.jpeg"]
+            var picture = document.getElementById("pic")
+            var image = picture.src
+            var index = 0
+            for(var i = 0; i < array.length; i++){
+                if(array[i] == image){
+                    index = i;
+                    break;
+                }
+            }
+            var NewIndex = index + 1;
+            if(NewIndex > 4){
+                NewIndex = 0
+            }
+            picture.src = array[NewIndex] 
+        }
+        function onPrevious(){
+            var array = ["https://people.eecs.ku.edu/~a354s553/images/img1.jpeg","https://people.eecs.ku.edu/~a354s553/images/img2.jpeg","https://people.eecs.ku.edu/~a354s553/images/img3.jpeg","https://people.eecs.ku.edu/~a354s553/images/img4.jpeg", "https://people.eecs.ku.edu/~a354s553/images/img5.jpeg"]
+            var picture = document.getElementById("pic")
+            var image = picture.src
+            var index = 0
+            for(var i = 0; i < array.length; i++){
+                if(array[i] == image){
+                    index = i;
+                    break;
+                }
+            }
+            var NewIndex = index - 1;
+            if(NewIndex < 0){
+                NewIndex = 4
+            }
+            picture.src = array[NewIndex]
+            
+        }
+    </script> 
+    <style>
+        button{
+            width: 75px;
+        }
+    </style>
+</body>
+</html>
